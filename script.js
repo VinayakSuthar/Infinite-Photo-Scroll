@@ -1,4 +1,5 @@
 const container = document.querySelector(".photo-container");
+const loader = document.querySelector(".loader");
 
 let count = 30;
 let imageCount = 0;
@@ -11,6 +12,7 @@ function imageLoaded() {
   imageCount++;
   if(imageCount === totalImage){
     ready = true;
+    loader.hidden = true;
   }
 }
 
