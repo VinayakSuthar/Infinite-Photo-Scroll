@@ -34,6 +34,10 @@ function displayPhoto(photosArray) {
       href: element.links.html,
       target: "_blank"
     });
+    // changing null description
+    if(!element.description) {
+      element.description = "no description";
+    }
     // create <img> element and give attributes to it
     const image = document.createElement('img');
     setAttributes(image, {
